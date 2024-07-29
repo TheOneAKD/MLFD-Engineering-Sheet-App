@@ -588,4 +588,6 @@ def handle_session_ended():
 
 
 if __name__ == '__main__':
-    socketio.run(app, host='0.0.0.0', port=5000, debug=True)
+    from waitress import serve
+    serve(app, host='0.0.0.0', port=8080)
+    # socketio.run(app, host='0.0.0.0', port=5000, debug=True)
